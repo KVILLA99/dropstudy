@@ -93,9 +93,13 @@
           type="button"
           class="w3-padding-large w3-section neoButton"
           value="JOIN"
-          onclick="myFunction()"
+          onclick="myFunction(); meFunction()"
         />
-
+        <script>
+          function meFunction(){
+            alert('You have sucessfully joined a group, your phone number has been sent to everyone in the session.');
+          }
+        </script>
         <script>
           var students = JSON.parse(localStorage.getItem('students'));
           
