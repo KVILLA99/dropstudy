@@ -14,7 +14,7 @@ a:hover {
 .btn-default:hover,
 .btn-default:focus {
   color: #333;
-   /* Prevent inheritence from `body` */
+  text-shadow: none; /* Prevent inheritence from `body` */
   background-color: #fff;
   border: 1px solid #fff;
 }
@@ -32,7 +32,7 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 0 0 3px #FF0000
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */

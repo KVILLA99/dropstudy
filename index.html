@@ -49,18 +49,18 @@
     }
     
     .neoButton {
-  	  background: #373332;
+      transition: 0.5s;
+  	  background: rgba(52, 152, 219,1.0);
       border: 1px solid rgba(0, 0, 0, 0.25);
-	  	border-radius: 12px;
-	  	box-shadow: 6px 6px 16px 0 rgba(45,41,40, 0.71), -6px -6px 26px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
       color: #fff;
     }
     
     .neoButton:hover {
-      transition: 0.6s;
+      transition: 0.5s;
+      background: #2980b9;
       border: 1px solid rgba(0, 0, 0, 0.25);
       border-radius: 12px;
-      box-shadow: inset 5px 5px 10px 0 rgba(35,31,30, 0.8), inset -6px -6px 26px 0 rgba(0, 0, 0, 0.3);
       color: #fff;
     }
     
@@ -72,9 +72,14 @@
       font-weight: bold;
     }
     
+    .s-bold {
+      font-weight: 900;
+    }
+    
     .outline {
-      outline-color: #444;
-      outline-width: 2px;
+      -webkit-text-stroke-width: 0.1px;
+      color: white;
+      text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue;
     }
 }
 
@@ -140,8 +145,8 @@
     <div class="w3-padding-large" id="main">
       <!-- Header/Home -->
       <header class="w3-container w3-padding-32 w3-center" id="home">
-        <h1 class="w3-jumbo"><span class="w3-hide-small"></span> <b class="outline">DropStudy</b></h1>
-        <p><b>Drop In, Study Together, Pass the Class</b></p>
+        <h1 class="w3-jumbo"><span class="w3-hide-small"></span> <u class="outline s-bold">DropStudy</u></h1>
+        <p><u class="outline">Drop In, Study Together, Pass the Class.</u></p>
         <img
           src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2Fcruzhacks-2020-logo.png?v=1579332790258"
           alt="logo"
@@ -152,8 +157,8 @@
       </header>
 
       <!-- About Section -->
-      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-        <h2 class="w3-text-light-grey">
+      <div class="w3-content w3-justify w3-text-grey w3-padding-64 " id="about">
+        <h2 class= "outline">
           ABOUT DROPSTUDY
           <img
             src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FFeather.png?1579343131047"
