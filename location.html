@@ -62,7 +62,8 @@
       color: #fff;
     }
   </style>
-  <body class="dark">
+  <body style = "background: url(https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2F1ded44f66234c36e01a5ce1613b94e98.jpg?v=1579390466292);
+                 background-size: 100%,100%;">
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
       rel="stylesheet"
@@ -102,7 +103,6 @@
             alert('You have sucessfully joined a group, your phone number has been sent to everyone in the session.');
 
             if(students.length > 0) {
-              console.log('alerted');
               for(var i = 0; i < students.length; i++) {
 
                 let request = new XMLHttpRequest()
