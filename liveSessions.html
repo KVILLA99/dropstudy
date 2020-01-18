@@ -40,12 +40,18 @@
         margin-left: 0;
       }
     }
-    
+
     .dark {
       background: #373332;
       color: #fff;
+      border-radius: 15px;
     }
-    
+    .outline {
+      -webkit-text-stroke-width: 0.1px;
+      color: white;
+      text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px darkblue;
+    }
+
     .neoButton {
       transition: 0.5s;
       background: rgba(52, 152, 219, 1);
@@ -61,10 +67,11 @@
       border-radius: 12px;
       color: #fff;
     }
-    
   </style>
-  <body style= "background: url(https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2F9.26.14xS.Cruz%20Interior%20Shots%20Low%20Res-10.jpg?v=1579387900803);
-               background-size: 100%, 100%;">
+  <body
+    style="background: url(https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2F9.26.14xS.Cruz%20Interior%20Shots%20Low%20Res-10.jpg?v=1579387900803);
+               background-size: 100%, 100%;"
+  >
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
       <!-- Avatar image in top left corner -->
@@ -87,7 +94,7 @@
         class="w3-bar-item w3-button w3-padding-large w3-hover-black"
       >
         <img
-          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Study-Sessions.png?v=1579355164208"
+          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Study-Sessions.png?v=1579389850540"
           style="width:100%"
         />
         <p>Live Sessions</p>
@@ -132,11 +139,11 @@
       <!-- Header/Home -->
       <header class="w3-container w3-padding-32 w3-center" id="home">
         <h1 class="w3-jumbo">
-          <span class="w3-hide-small"></span> Live Study Sessions
+          <u class="outline s-bold">Live Study Sessions</u>
         </h1>
         <p></p>
         <img
-          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Study-Sessions.png?v=1579355164208"
+          src="https://cdn.glitch.com/0476f9f0-14a5-4c19-a292-ec9ff99bfbbf%2FCH-Study-Sessions.png?v=1579389850540"
           alt="study sessions logo"
           class="w3-image"
           width="992"
@@ -150,7 +157,7 @@
           STUDY LOCATIONS
         </h2>
         <hr style="width:350px" class="w3-opacity" />
-        
+
         <select class="w3-input w3-padding-16">
           <option>Mchenry Library</option>
           <option>Baskin Engineering Library</option>
@@ -159,13 +166,13 @@
           <option>Stevenson Fireside Lounge</option>
           <option>Oakes Cafe</option>
         </select>
-        
+
         <a href="location.html">
           <button class="w3-padding-large w3-section neoButton">
             Continue
           </button>
         </a>
-        
+
         <!-- End Portfolio Section -->
       </div>
       <!-- Footer -->
