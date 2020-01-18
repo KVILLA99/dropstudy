@@ -2,7 +2,6 @@
 <html lang="en">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel ="stylesheet" href="loca.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link
     rel="stylesheet"
@@ -98,11 +97,12 @@
         />
         <script>
           var students = JSON.parse(localStorage.getItem('students'));
-          
+                    
           function myFunction() {
             alert('You have sucessfully joined a group, your phone number has been sent to everyone in the session.');
 
             if(students.length > 0) {
+              console.log('alerted');
               for(var i = 0; i < students.length; i++) {
 
                 let request = new XMLHttpRequest()
@@ -118,7 +118,7 @@
 
                 request.send(JSON.stringify({"amount": "2", "class": "ECON 200", "student": students[i]}))
               }
-            }
+            }  
             
           }
         </script>
