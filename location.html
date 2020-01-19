@@ -107,8 +107,7 @@
           />
         </a>
         <script>
-          // var students = ["19513176514", "16692829957"];
-          var students = ["dandurnev1@gmail.com"]
+          var students = ["19513176514", "16692829957"];
 
           console.log(students);
 
@@ -117,16 +116,17 @@
             
             for(var i = 0; i < students.length; i++) {
               let request = new XMLHttpRequest()
-            request.onreadystatechange = function() {
-              if (this.readyState === 4) {
-                console.log(this.status)
-                console.log(this.responseText)
-              }
+request.onreadystatechange = function() {
+  if (this.readyState === 4) {
+    console.log(this.status)
+    console.log(this.responseText)
+  }
+}
+request.open("POST", "https://events-api.notivize.com/applications/b5a94caa-d2fc-408e-88a6-4a5310d4c8e6/event_flows/ccb74e71-297d-495c-b0ec-a38c59ec8d7e/events", true)
+request.setRequestHeader("Content-Type", "application/json")
+request.send(JSON.stringify({"amount": "2", "class": "value123", "course": "coursse0", "student": students[i]}))
+            
             }
-            request.open("POST", "https://events-api.notivize.com/applications/b5a94caa-d2fc-408e-88a6-4a5310d4c8e6/event_flows/ccb74e71-297d-495c-b0ec-a38c59ec8d7e/events", true)
-            request.setRequestHeader("Content-Type", "application/json")
-            request.send(JSON.stringify({"amount": "<value for amount>", "class": "<value for class>", "course": "<value for course>", "student": "<value for student>"}))
-                        }
           }
         </script>
       </p>
