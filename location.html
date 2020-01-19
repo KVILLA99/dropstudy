@@ -112,32 +112,18 @@
           console.log(students);
 
           function myFunction() {
-            if (students.length > 0) {
-              for (var i = 0; i < students.length; i++) {
-                let request = new XMLHttpRequest();
-                request.onreadystatechange = function() {
-                  if (this.readyState === 4) {
-                    console.log(this.status);
-                    console.log(this.responseText);
-                  }
-                };
-                request.open(
-                  "POST",
-                  "https://events-api.notivize.com/applications/0a7c7e50-b95e-4b72-b678-a17c79d13c0f/event_flows/3f974c4a-4bb0-463a-912d-3503a673299c/events",
-                  true
-                );
-                request.setRequestHeader("Content-Type", "application/json");
-                request.send(
-                  JSON.stringify({
-                    amount: "1",
-                    class: "ECONOMY100",
-                    student: students[i]
-                  })
-                );
+            for(var i = 0; i < students.length; i++) {
+              let request = new XMLHttpRequest()
+              request.onreadystatechange = function() {
+                if (this.readyState === 4) {
+                  console.log(this.status)
+                  console.log(this.responseText)
+                }
               }
-              alert(
-                "You have sucessfully joined a group, your phone number has been sent to everyone in the session."
-              );
+              request.open("POST", "https://events-api.notivize.com/applications/0a7c7e50-b95e-4b72-b678-a17c79d13c0f/event_flows/3f974c4a-4bb0-463a-912d-3503a673299c/events", true)
+              request.setRequestHeader("Content-Type", "application/json")
+              request.send(JSON.stringify({"amount": "4", "class": "class", "student": students[i]}))
+              console.warn('sending SMS to ' + students[i]);
             }
           }
         </script>
