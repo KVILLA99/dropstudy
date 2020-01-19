@@ -99,13 +99,7 @@
           value="JOIN"
           onclick="myFunction();"
         />
-        <a href="liveSessions.html">
-          <input
-            type="button"
-            class="w3-padding-large w3-section neoButton"
-            value="GO BACK"
-          />
-        </a>
+      
         <script>
           var students = ["19513176514", "16692829957"];
 
@@ -121,7 +115,8 @@ request.onreadystatechange = function() {
 }
 request.open("POST", "https://events-api.notivize.com/applications/aa6d7535-0cda-46d6-980a-b9861a0f52de/event_flows/52072558-2c92-4e3c-b2b5-88ee3f359dc8/events", true)
 request.setRequestHeader("Content-Type", "application/json")
-request.send(JSON.stringify({"amount": "3", "class": "econ", "student": "kevinvillanueva910@yahoo.com"}))
+request.send(JSON.stringify({"amount": "3", "class": "Econ", "student": "13234126648"}))
+
             
         /*    for(var i = 0; i < students.length; i++) {
               let request = new XMLHttpRequest()
@@ -134,6 +129,19 @@ request.onreadystatechange = function() {
 request.open("POST", "https://events-api.notivize.com/applications/b5a94caa-d2fc-408e-88a6-4a5310d4c8e6/event_flows/ccb74e71-297d-495c-b0ec-a38c59ec8d7e/events", true)
 request.setRequestHeader("Content-Type", "application/json")
 request.send(JSON.stringify({"amount": "2", "class": "value123", "course": "coursse0", "student": students[i]}))
+            
+            
+            
+              <a href="liveSessions.html">
+          <input
+            type="button"
+            class="w3-padding-large w3-section neoButton"
+            value="GO BACK"
+          />
+        </a> 
+            
+            
+            
             
             } */
           } 
