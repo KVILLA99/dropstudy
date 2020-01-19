@@ -124,10 +124,9 @@
                     console.log(this.responseText)
                   }
                 }
-                request.open("POST", "https://events-api.notivize.com/applications/45a8bc38-a589-49b3-bb08-231544f66392/event_flows/b028b953-03cb-4351-a805-4e83af45a9de/events", true)
+                request.open("POST", "https://events-api.notivize.com/applications/0a7c7e50-b95e-4b72-b678-a17c79d13c0f/event_flows/7ac6acd2-3818-4c35-bbbc-02605c858228/events", true)
                 request.setRequestHeader("Content-Type", "application/json")
-                request.send(JSON.stringify({"amount": "3", "class": "ECON100", "student": students[i]}));
-                console.log('SMS sent to ' + students[i]);
+                request.send(JSON.stringify({"amount": "5", "class": "ECON10A", "student": students[i]}));
               }
             }
           }
