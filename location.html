@@ -107,11 +107,13 @@
           />
         </a>
         <script>
-          var students = ["19513176514", "16692829957"];
-
-          console.log(students);
 
           function myFunction() {
+            
+            var students = ["19513176514", "16692829957"];
+
+            console.log(students);
+            
             for(var i = 0; i < students.length; i++) {
               let request = new XMLHttpRequest()
               request.onreadystatechange = function() {
@@ -120,10 +122,9 @@
                   console.log(this.responseText)
                 }
               }
-              request.open("POST", "https://events-api.notivize.com/applications/0a7c7e50-b95e-4b72-b678-a17c79d13c0f/event_flows/3f974c4a-4bb0-463a-912d-3503a673299c/events", true)
+              request.open("POST", "https://events-api.notivize.com/applications/3ae54c3c-e7c7-49c9-8827-94a056543ed3/event_flows/3504104b-62fd-463f-9e5f-d99055825163/events", true)
               request.setRequestHeader("Content-Type", "application/json")
-              request.send(JSON.stringify({"amount": "4", "class": "class", "student": students[i]}))
-              console.warn('sending SMS to ' + students[i]);
+              request.send(JSON.stringify({"amount": "3", "class": "className", "course": "courseName", "student": students[i]}))
             }
           }
         </script>
