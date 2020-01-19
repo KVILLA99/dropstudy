@@ -108,13 +108,13 @@
         </a>
         <script>
           var students = JSON.parse(localStorage.getItem("students"));
-          console.log(students.length);
+          console.log(students);
           
           function myFunction() {
-            alert(
-              "You have sucessfully joined a group, your phone number has been sent to everyone in the session."
-            );
-
+            // alert(
+            //   "You have sucessfully joined a group, your phone number has been sent to everyone in the session."
+            // );
+            console.log('sending');
             if (students.length > 0) {
               for (var i = 0; i < students.length; i++) {
                 let request = new XMLHttpRequest()
@@ -126,7 +126,7 @@
                 }
                 request.open("POST", "https://events-api.notivize.com/applications/0a7c7e50-b95e-4b72-b678-a17c79d13c0f/event_flows/7ac6acd2-3818-4c35-bbbc-02605c858228/events", true)
                 request.setRequestHeader("Content-Type", "application/json")
-                request.send(JSON.stringify({"amount": "5", "class": "ECON10A", "student": students[i]}));
+                request.send(JSON.stringify({"amount": "3", "class": "testclass", "student": students[i]}))
               }
             }
           }
